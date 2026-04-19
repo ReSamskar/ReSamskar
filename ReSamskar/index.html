@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Spirituality — ReSamskar</title>
+    <meta name="description"
+        content="Evidence-based programmes integrating modern developmental science with the timeless wisdom of classical Indian thought." />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Public/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Public/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Public/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./Public/favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased
+        }
+
+        body {
+            background: #fdf8f3;
+            color: #120c0b;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 15px;
+            line-height: 1.6
+        }
+
+        ::selection {
+            background: #0f3b46;
+            color: #f9f6f3
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        .section {
+            padding: 6rem 0
+        }
+
+        @media(min-width:768px) {
+            .section {
+                padding: 8rem 0
+            }
+        }
+
+        /* Navbar */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: background .3s, border .3s
+        }
+
+        #navbar.scrolled {
+            background: rgba(253, 248, 243, .92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(200, 159, 86, .2)
+        }
+
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            text-decoration: none
+        }
+
+        .nav-logo img {
+            width: 2.25rem;
+            height: 2.25rem;
+            object-fit: contain;
+            mix-blend-mode: multiply
+        }
+
+        .nav-logo span {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: .875rem;
+            color: #120c0b;
+            letter-spacing: -.02em
+        }
+
+        .nav-logo span em {
+            color: rgba(42, 27, 24, .45);
+            font-style: normal;
+            font-weight: 400
+        }
+
+        .nav-tabs {
+            display: none;
+            align-items: center;
+            gap: .25rem;
+            background: rgba(42, 27, 24, .06);
+            border-radius: 100px;
+            padding: .25rem
+        }
+
+        @media(min-width:768px) {
+            .nav-tabs {
+                display: flex
+            }
+        }
+
+        .nav-tab {
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            font-weight: 500;
+            padding: .375rem 1rem;
+            border-radius: 100px;
+            color: rgba(42, 27, 24, .55);
+            transition: all .2s
+        }
+
+        .nav-tab:hover {
+            color: #120c0b
+        }
+
+        .nav-tab.active {
+            background: #c89f56;
+            color: #f9f6f3
+        }
+
+        .nav-cta {
+            display: none;
+            align-items: center;
+            gap: .5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            font-weight: 500;
+            padding: .625rem 1.25rem;
+            background: #c89f56;
+            color: #120c0b;
+            border-radius: .375rem;
+            transition: all .2s
+        }
+
+        @media(min-width:768px) {
+            .nav-cta {
+                display: inline-flex
+            }
+        }
+
+        .nav-cta:hover {
+            background: #b8903a
+        }
+
+
+
+        /* Eyebrow */
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: .62rem;
+            font-weight: 500;
+            letter-spacing: .22em;
+            text-transform: uppercase
+        }
+
+        .eyebrow-line {
+            width: 1.25rem;
+            height: 1px;
+            flex-shrink: 0
+        }
+
+        /* Fade-up animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px)
+        }
+
+        .fade-up.visible {
+            animation: fadeUp .75s cubic-bezier(.16, 1, .3, 1) forwards
+        }
+
+        /* ── HERO ── */
+        #hero {
+            position: relative;
+            overflow: hidden;
+            padding-top: 140px;
+            padding-bottom: 96px
+        }
+
+        .hero-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse 80% 60% at 65% 35%, rgba(200, 159, 86, .15) 0%, transparent 65%)
+        }
+
+        .hero-dots {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: radial-gradient(rgba(200, 159, 86, .18) 1px, transparent 1px);
+            background-size: 36px 36px;
+            opacity: .45
+        }
+
+        .hero-eyebrow {
+            animation: fadeUp .55s .1s cubic-bezier(.16, 1, .3, 1) both
+        }
+
+        .hero-h1 {
+            font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+            letter-spacing: -.03em;
+            line-height: 1.02;
+            color: #120c0b;
+            font-weight: 400;
+            max-width: 56rem;
+            margin-bottom: 2rem;
+            animation: fadeUp .95s .25s cubic-bezier(.16, 1, .3, 1) both
+        }
+
+        .hero-p {
+            font-size: 1rem;
+            max-width: 32rem;
+            line-height: 1.7;
+            color: rgba(42, 27, 24, .6);
+            margin-bottom: 2.5rem;
+            animation: fadeUp .7s .45s cubic-bezier(.16, 1, .3, 1) both
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: .9rem;
+            padding: .85rem 2.2rem;
+            background: #c89f56;
+            color: #fdf8f3;
+            border-radius: 100px;
+            letter-spacing: .015em;
+            box-shadow: 0 6px 28px -4px rgba(200, 159, 86, .55);
+            transition: all .2s;
+            animation: fadeUp .6s .6s cubic-bezier(.16, 1, .3, 1) both
+        }
+
+        .hero-cta:hover {
+            box-shadow: 0 10px 36px -4px rgba(200, 159, 86, .65);
+            transform: translateY(-1px)
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border-radius: 1rem;
+            margin-top: 5rem;
+            background: rgba(42, 27, 24, .1);
+            border: 1px solid rgba(42, 27, 24, .1);
+            box-shadow: 0 4px 24px -4px rgba(18, 12, 11, .07);
+            animation: fadeUp .65s .75s cubic-bezier(.16, 1, .3, 1) both
+        }
+
+        @media(min-width:768px) {
+            .metrics {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        .metric {
+            padding: 1.1rem 1rem;
+            background: #fdf8f3;
+            text-align: center
+        }
+
+        .metric-n {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #120c0b;
+            margin-bottom: .375rem
+        }
+
+        .metric-l {
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            color: rgba(42, 27, 24, .38);
+            line-height: 1.5
+        }
+
+        /* ── CENTREPIECE ── */
+        #centrepiece {
+            background: linear-gradient(160deg, #fdf3e4 0%, #fdf8f3 50%, #f0eee8 100%);
+            border-top: 1px solid rgba(42, 27, 24, .1);
+            border-bottom: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .centrepiece-inner {
+            padding: 2.5rem 0;
+            max-width: 48rem;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.6rem
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 18rem
+        }
+
+        .ornament-line {
+            flex: 1;
+            height: 1px
+        }
+
+        .ornament-danda {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6rem;
+            color: #c89f56;
+            opacity: .6
+        }
+
+        .sanskrit {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            font-size: clamp(1.8rem, 4.5vw, 3.6rem);
+            color: #120c0b;
+            letter-spacing: -.015em;
+            line-height: 1.18;
+            margin-top: .5rem
+        }
+
+        .translit {
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+            font-size: .82rem;
+            color: rgba(42, 27, 24, .38);
+            letter-spacing: .09em
+        }
+
+        .gold-bar {
+            width: 3.5rem;
+            height: 2px;
+            background: #c89f56;
+            border-radius: 2px
+        }
+
+        .translation {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: clamp(1.3rem, 3vw, 2.2rem);
+            color: #c89f56;
+            letter-spacing: -.01em;
+            line-height: 1.35;
+            max-width: 30rem
+        }
+
+        .source-label {
+            font-family: 'Inter', sans-serif;
+            font-size: .65rem;
+            color: rgba(42, 27, 24, .38);
+            letter-spacing: .14em;
+            text-transform: uppercase
+        }
+
+        /* ── LIFESTYLE ── */
+        #lifestyle {
+            border-top: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .section-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 3.5rem
+        }
+
+        @media(min-width:768px) {
+            .section-header {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between
+            }
+        }
+
+        .section-header p {
+            font-size: .875rem;
+            max-width: 18rem;
+            line-height: 1.7;
+            color: rgba(42, 27, 24, .6)
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem
+        }
+
+        @media(min-width:768px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem
+        }
+
+        @media(min-width:768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        /* Photo card */
+        .photo-card {
+            border-radius: 1.25rem;
+            box-shadow: 0 24px 64px -12px rgba(18, 12, 11, .22), 0 4px 16px -4px rgba(18, 12, 11, .08);
+            background: #fffdf9;
+            border: 1px solid rgba(42, 27, 24, .1);
+            overflow: hidden;
+            height: 100%
+        }
+
+        .photo-img-wrap {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden
+        }
+
+        .photo-img-wrap img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform .7s cubic-bezier(.16, 1, .3, 1)
+        }
+
+        .photo-card:hover .photo-img-wrap img {
+            transform: scale(1.05)
+        }
+
+        .photo-dot {
+            position: absolute;
+            top: .85rem;
+            right: .85rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%
+        }
+
+        .photo-body {
+            padding: 1.4rem 1.6rem 1.75rem
+        }
+
+        .photo-label {
+            font-family: 'Inter', sans-serif;
+            font-size: .58rem;
+            font-weight: 600;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            margin-bottom: .5rem
+        }
+
+        .photo-divider {
+            width: 1.75rem;
+            height: 1.5px;
+            opacity: .35;
+            border-radius: 2px;
+            margin-bottom: .7rem
+        }
+
+        .photo-caption {
+            font-family: 'Cormorant Garamond', 'Palatino', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: -.01em;
+            color: #2a1b18
+        }
+
+        /* ── PROGRAMMES ── */
+        #programs {
+            border-top: 1px solid rgba(42, 27, 24, .1);
+            background: rgba(219, 202, 176, .14)
+        }
+
+        .prog-card {
+            border-radius: 24px;
+            border: 1px solid rgba(42, 27, 24, .1);
+            background: #fff;
+            box-shadow: 0 12px 48px -8px rgba(18, 12, 11, .1), 0 2px 8px -2px rgba(18, 12, 11, .04);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%
+        }
+
+        .prog-header {
+            position: relative;
+            overflow: hidden;
+            padding: 2.75rem 2.5rem 2.25rem
+        }
+
+        .prog-watermark {
+            position: absolute;
+            top: -1rem;
+            right: -.5rem;
+            font-family: 'DM Serif Display', serif;
+            font-size: 11rem;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+            opacity: .06
+        }
+
+        .prog-age {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .06em;
+            color: #fff;
+            padding: .45rem 1.1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem
+        }
+
+        .prog-stage {
+            font-family: 'Inter', sans-serif;
+            font-size: .6rem;
+            font-weight: 600;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            margin-bottom: .5rem
+        }
+
+        .prog-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: -.03em;
+            line-height: 1.1;
+            margin-bottom: .5rem
+        }
+
+        .prog-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -.01em;
+            line-height: 1.25;
+            color: #120c0b;
+            opacity: .85;
+            margin-bottom: .85rem
+        }
+
+        .prog-body {
+            font-family: 'Inter', sans-serif;
+            font-size: .875rem;
+            line-height: 1.7;
+            color: rgba(42, 27, 24, .6)
+        }
+
+        .prog-modules {
+            padding: 1.75rem 2.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: .65rem
+        }
+
+        .prog-modules-label {
+            font-family: 'Inter', sans-serif;
+            font-size: .6rem;
+            font-weight: 600;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: rgba(42, 27, 24, .38);
+            margin-bottom: .5rem
+        }
+
+        .prog-module {
+            display: flex;
+            align-items: center;
+            gap: .85rem
+        }
+
+        .prog-module-line {
+            width: 20px;
+            height: 1.5px;
+            flex-shrink: 0;
+            border-radius: 2px
+        }
+
+        .prog-module span {
+            font-family: 'Inter', sans-serif;
+            font-size: .875rem;
+            color: #2a1b18;
+            line-height: 1.5
+        }
+
+        .prog-cta-wrap {
+            padding: 0 2.5rem 2.25rem
+        }
+
+        .prog-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: .82rem;
+            font-weight: 500;
+            padding: .65rem 1.4rem;
+            border-radius: 100px;
+            letter-spacing: .01em;
+            transition: all .2s
+        }
+
+        /* ── HOW WE DO IT ── */
+        #how {
+            border-top: 1px solid rgba(42, 27, 24, .1);
+            background: #fdf8f3
+        }
+
+        .method-grid-top {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem
+        }
+
+        @media(min-width:768px) {
+            .method-grid-top {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        .method-grid-bot {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem
+        }
+
+        @media(min-width:768px) {
+            .method-grid-bot {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .method-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            height: 100%
+        }
+
+        .method-card-lg {
+            padding: 3rem 3rem 2.75rem
+        }
+
+        .method-card-sm {
+            padding: 2.5rem 2.25rem 2.25rem
+        }
+
+        .method-watermark {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-family: 'DM Serif Display', serif;
+            pointer-events: none;
+            line-height: 1;
+            opacity: .06
+        }
+
+        .method-watermark-lg {
+            font-size: 10rem
+        }
+
+        .method-watermark-sm {
+            font-size: 8rem
+        }
+
+        .method-principle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: .62rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            margin-bottom: .5rem
+        }
+
+        .method-h3-lg {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            letter-spacing: -.025em;
+            line-height: 1.1;
+            color: #120c0b
+        }
+
+        .method-h3-sm {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -.022em;
+            line-height: 1.15;
+            color: #120c0b
+        }
+
+        .method-body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.75;
+            font-size: .92rem;
+            color: #2a1b18;
+            flex: 1
+        }
+
+        .method-body-sm {
+            font-size: .88rem
+        }
+
+        .method-quote {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-style: italic;
+            font-size: .78rem;
+            padding-top: 1rem
+        }
+
+        .pullquote {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 3rem;
+            background: #120c0b;
+            gap: 1.5rem
+        }
+
+        .pullquote-mark {
+            font-family: 'DM Serif Display', serif;
+            font-size: 5rem;
+            line-height: .7;
+            color: #c89f56;
+            opacity: .15
+        }
+
+        .pullquote-text {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            color: #fdf8f3;
+            line-height: 1.25;
+            letter-spacing: -.02em;
+            max-width: 38rem
+        }
+
+        .pullquote-attr {
+            display: flex;
+            align-items: center;
+            gap: 1rem
+        }
+
+        .pullquote-dash {
+            width: 2.5rem;
+            height: 1px;
+            background: rgba(200, 159, 86, .4)
+        }
+
+        .pullquote-name {
+            font-family: 'Inter', sans-serif;
+            font-size: .64rem;
+            color: rgba(253, 248, 243, .38);
+            letter-spacing: .18em;
+            text-transform: uppercase
+        }
+
+        .pullquote-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: .9rem;
+            padding: .9rem 2.4rem;
+            background: #c89f56;
+            color: #120c0b;
+            border-radius: 100px;
+            letter-spacing: .015em;
+            box-shadow: 0 8px 32px -4px rgba(200, 159, 86, .55);
+            transition: all .2s;
+            margin-top: 1rem
+        }
+
+        .pullquote-btn:hover {
+            transform: scale(1.05)
+        }
+
+        /* ── PILLARS ── */
+        #pillars {
+            border-top: 1px solid rgba(42, 27, 24, .1);
+            background: rgba(219, 202, 176, .1)
+        }
+
+        .pillars-header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3.5rem;
+            align-items: flex-end
+        }
+
+        @media(min-width:768px) {
+            .pillars-header {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem
+            }
+        }
+
+        .pillar-row {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .pillar-row:last-child {
+            border-bottom: none
+        }
+
+        @media(min-width:768px) {
+            .pillar-row {
+                gap: 3.5rem
+            }
+        }
+
+        .pillar-num {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 1px solid rgba(42, 27, 24, .1);
+            background: #fdf8f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+            font-size: .75rem;
+            color: rgba(42, 27, 24, .38)
+        }
+
+        .pillar-content {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            flex: 1
+        }
+
+        @media(min-width:768px) {
+            .pillar-content {
+                flex-direction: row;
+                gap: 3.5rem;
+                align-items: flex-start
+            }
+        }
+
+        .pillar-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #120c0b;
+            min-width: 180px
+        }
+
+        .pillar-body {
+            font-family: 'Inter', sans-serif;
+            font-size: .875rem;
+            line-height: 1.7;
+            color: rgba(42, 27, 24, .6);
+            max-width: 32rem
+        }
+
+        /* ── TESTIMONIALS ── */
+        #testimonials {
+            border-top: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .testimonial {
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            height: 100%;
+            background: #fdf8f3;
+            border: 1px solid rgba(42, 27, 24, .1);
+            box-shadow: 0 4px 24px -4px rgba(18, 12, 11, .06)
+        }
+
+        .testimonial-mark {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            line-height: 1;
+            color: #c89f56;
+            opacity: .3
+        }
+
+        .testimonial-q {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-style: italic;
+            font-size: 1.125rem;
+            line-height: 1.375;
+            flex: 1;
+            color: #120c0b;
+        }
+
+        .testimonial-footer {
+            padding-top: 1rem;
+            border-top: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .testimonial-name {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.25rem;
+            color: #120c0b;
+        }
+
+        .testimonial-from {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            color: rgba(42, 27, 24, 0.40);
+        }
+
+        /* ── FOOTER ── */
+        #contact {
+            border-top: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .footer-cta {
+            border-bottom: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .footer-cta .container {
+            padding-top: 5rem;
+            padding-bottom: 5rem
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem
+        }
+
+        @media(min-width:768px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: flex-end
+            }
+        }
+
+        .footer-email {
+            font-family: "DM Serif Display", Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(1.5rem, 2.7vw, 2.5rem);
+            color: #c89f56;
+            transition: color .2s
+        }
+
+        .footer-email:hover {
+            text-decoration: underline;
+            text-underline-offset: 3.2px
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .75rem;
+            margin-top: 1rem
+        }
+
+        .social-link {
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            padding: .5rem 1rem;
+            border-radius: 100px;
+            border: 1px solid rgba(42, 27, 24, .1);
+            color: #2a1b18;
+            transition: all .2s
+        }
+
+        .social-link:hover {
+            border-color: #2a1b18
+        }
+
+        .footer-bottom {
+            padding: 2rem 0
+        }
+
+        .footer-bottom-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem
+        }
+
+        @media(min-width:768px) {
+            .footer-bottom-inner {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: .5rem
+        }
+
+        .footer-brand img {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+            mix-blend-mode: multiply
+        }
+
+        .footer-brand span {
+            font-family: 'Inter', sans-serif;
+            font-size: .875rem;
+            font-weight: 500;
+            color: #120c0b
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem
+        }
+
+        .footer-nav a {
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            color: rgba(42, 27, 24, .38);
+            transition: color .15s
+        }
+
+        .footer-nav a:hover {
+            color: #120c0b
+        }
+
+        .footer-copy {
+            font-family: 'Inter', sans-serif;
+            font-size: .62rem;
+            color: rgba(42, 27, 24, .38)
+        }
+
+        .footer-tagline {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(42, 27, 24, .1)
+        }
+
+        .footer-tagline p {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1rem;
+            color: rgba(42, 27, 24, .38)
+        }
+
+        /* Shloka section (hidden on this page but styled) */
+        .shloka-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem
+        }
+
+        .shloka-danda {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.75rem;
+            line-height: 1;
+            pointer-events: none;
+            opacity: .12
+        }
+
+        .shloka-main {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            line-height: 1.35;
+            color: #120c0b;
+            white-space: pre-line
+        }
+
+        .shloka-translit {
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            font-style: italic;
+            color: rgba(42, 27, 24, .38)
+        }
+
+        .shloka-meaning {
+            font-family: 'Inter', sans-serif;
+            font-size: .875rem;
+            line-height: 1.7;
+            flex: 1;
+            color: #2a1b18
+        }
+
+        .shloka-source {
+            font-family: 'Inter', sans-serif;
+            font-size: .75rem;
+            font-weight: 500;
+            padding-top: .75rem
+        }
+
+        /* ── METHOD — Minimalist Step List (Ported from Tesseract) ── */
+        .method-step-list {
+            position: relative;
+            z-index: 1;
+            margin-top: 3rem;
+        }
+
+        .method-step {
+            display: grid;
+            grid-template-columns: 3.5rem 1fr;
+            gap: 0 2rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 1.25rem;
+            background: #fdf8f3;
+            box-shadow: 10px 10px 24px #e0d8cc, -10px -10px 24px #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            align-items: start;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        @media(min-width: 768px) {
+            .method-step {
+                grid-template-columns: 3.5rem 1fr 1fr;
+                gap: 0 3rem;
+            }
+        }
+
+        .method-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .method-step-n {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #c89f56;
+            opacity: .7;
+            line-height: 1.3;
+            padding-top: .1rem;
+        }
+
+        .method-step-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+            font-weight: 400;
+            color: #120c0b;
+            letter-spacing: -.025em;
+            line-height: 1.15;
+        }
+
+        .method-step-body {
+            font-family: 'Inter', sans-serif;
+            font-size: .875rem;
+            line-height: 1.75;
+            color: rgba(42, 27, 24, 0.7);
+            margin-top: .6rem;
+        }
+
+        @media(min-width: 768px) {
+            .method-step-body {
+                margin-top: 0;
+                padding-top: .15rem;
+            }
+        }
+
+        .method-step-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            font-family: 'Inter', sans-serif;
+            font-size: .62rem;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-top: .75rem;
+        }
+
+        .method-step-tag::before {
+            content: '';
+            display: block;
+            width: .9rem;
+            height: 1px;
+            background: currentColor;
+            opacity: .6;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- NAVBAR -->
+    <header id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="./Public/ReSamskar_Logo.png" alt="ReSamskar logo" onerror="this.style.display='none'" />
+                <span>ReSamskar</span>
+            </a>
+            <nav class="nav-tabs">
+                <a href="/ReSamskar/index.html" class="nav-tab active">Spirituality</a>
+            </nav>
+            <a href="#contact" class="nav-cta">
+                Connect
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-dots"></div>
+        <div class="container" style="position:relative;z-index:10">
+            <div class="hero-eyebrow" style="margin-bottom:1.75rem">
+                <span class="eyebrow" style="color:#c89f56">
+                    <span class="eyebrow-line" style="background:#c89f56"></span>
+                    Foundational Development · Ages 5–15
+                </span>
+            </div>
+            <div style="max-width:56rem;margin-bottom:2rem">
+                <h1 class="hero-h1">
+                    Raising children who are <span style="color:#c89f56">wise</span>, <span
+                        style="color:#e07a5f">kind</span>,<br class="hidden-sm" /> and <em
+                        style="color:#0f3b46">grounded</em>
+                </h1>
+            </div>
+            <p class="hero-p">
+                Evidence-based programmes integrating modern developmental science with the timeless
+                wisdom of classical Indian thought — building inner clarity, empathy, and purpose from childhood.
+            </p>
+            <a href="#programs" class="hero-cta">
+                Explore Programmes
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M2 7.5h11M7.5 2l5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.6"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            <div class="metrics fade-up">
+                <div class="metric">
+                    <p class="metric-n">3</p>
+                    <p class="metric-l">Age-group programmes</p>
+                </div>
+                <div class="metric">
+                    <p class="metric-n">15+</p>
+                    <p class="metric-l">Modules per programme</p>
+                </div>
+                <div class="metric">
+                    <p class="metric-n">200+</p>
+                    <p class="metric-l">Children enrolled</p>
+                </div>
+                <div class="metric">
+                    <p class="metric-n">5</p>
+                    <p class="metric-l">Partner schools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CENTREPIECE -->
+    <section id="centrepiece">
+        <div class="container">
+            <div class="centrepiece-inner fade-up">
+                <div class="ornament">
+                    <div class="ornament-line"
+                        style="background:linear-gradient(to right,transparent,rgba(200,159,86,.55))"></div>
+                    <span class="ornament-danda">॥</span>
+                    <div class="ornament-line"
+                        style="background:linear-gradient(to left,transparent,rgba(200,159,86,.55))"></div>
+                </div>
+                <p class="sanskrit">आत्मनो मोक्षार्थं जगद्धिताय च</p>
+                <p class="translit">Ātmano mokṣārthaṃ jagadhitāya ca</p>
+                <div class="gold-bar"></div>
+                <p class="translation">"For one's own liberation<br>and for the welfare of the world."</p>
+                <p class="source-label">Ramakrishna Mission Motto · Inspired by the Mahābhārata</p>
+                <div class="ornament">
+                    <div class="ornament-line"
+                        style="background:linear-gradient(to right,transparent,rgba(200,159,86,.55))"></div>
+                    <span class="ornament-danda">॥</span>
+                    <div class="ornament-line"
+                        style="background:linear-gradient(to left,transparent,rgba(200,159,86,.55))"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIFESTYLE -->
+    <section id="lifestyle" class="section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div>
+                    <span class="eyebrow" style="color:#c89f56"><span class="eyebrow-line"
+                            style="background:#c89f56"></span>Learning Through Living</span>
+                    <h2
+                        style="font-size:clamp(2rem,4vw,3.4rem);color:#120c0b;margin-top:1rem;letter-spacing:-.02em;line-height:1.08;font-weight:400">
+                        Every moment<br>is a classroom</h2>
+                </div>
+                <p>Our programmes are woven into the fabric of daily life — not separate from it. Children learn by
+                    doing, feeling, and reflecting.</p>
+            </div>
+            <div class="grid-3">
+                <div class="fade-up photo-card">
+                    <div class="photo-img-wrap">
+                        <img src="Public/images/ls-yoga.jpg" alt="Morning yoga"
+                            onerror="this.src='https://placehold.co/640x360/fdf3e4/c89f56?text=Stillness+%26+Breath'" />
+                        <div class="photo-dot" style="background:#e07a5f;box-shadow:0 0 10px 3px rgba(224,122,95,.33)">
+                        </div>
+                    </div>
+                    <div class="photo-body">
+                        <p class="photo-label" style="color:#e07a5f">Stillness &amp; Breath</p>
+                        <div class="photo-divider" style="background:#e07a5f"></div>
+                        <p class="photo-caption">Morning yoga — finding peace before the day begins</p>
+                    </div>
+                </div>
+                <div class="fade-up photo-card">
+                    <div class="photo-img-wrap">
+                        <img src="Public/images/ls-kitchen.jpg" alt="Kitchen seva"
+                            onerror="this.src='https://placehold.co/640x360/fdf3e4/c89f56?text=Seva+%26+Service'" />
+                        <div class="photo-dot" style="background:#c89f56;box-shadow:0 0 10px 3px rgba(200,159,86,.33)">
+                        </div>
+                    </div>
+                    <div class="photo-body">
+                        <p class="photo-label" style="color:#c89f56">Seva &amp; Service</p>
+                        <div class="photo-divider" style="background:#c89f56"></div>
+                        <p class="photo-caption">Learning generosity in the kitchen — together</p>
+                    </div>
+                </div>
+                <div class="fade-up photo-card">
+                    <div class="photo-img-wrap">
+                        <img src="Public/images/ls-garden.jpg" alt="Garden"
+                            onerror="this.src='https://placehold.co/640x360/e8f0f2/0f3b46?text=Nature+%26+Wonder'" />
+                        <div class="photo-dot" style="background:#0f3b46;box-shadow:0 0 10px 3px rgba(15,59,70,.33)">
+                        </div>
+                    </div>
+                    <div class="photo-body">
+                        <p class="photo-label" style="color:#0f3b46">Nature &amp; Wonder</p>
+                        <div class="photo-divider" style="background:#0f3b46"></div>
+                        <p class="photo-caption">Growing roots — a child's curiosity meets the earth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMMES -->
+    <section id="programs" class="section"
+        style="background:rgba(219,202,176,.14);border-top:1px solid rgba(42,27,24,.1)">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div>
+                    <span class="eyebrow" style="color:#c89f56"><span class="eyebrow-line"
+                            style="background:#c89f56"></span>Programmes</span>
+                    <h2
+                        style="font-size:clamp(2rem,4vw,3.4rem);color:#120c0b;margin-top:1rem;letter-spacing:-.02em;line-height:1.08;font-weight:400">
+                        Three stages,<br><em style="color:#c89f56;font-style:normal">one inner journey</em></h2>
+                </div>
+                <p>Each stage is developmentally calibrated — meeting children where they are and guiding them gently
+                    forward.</p>
+            </div>
+            <div class="grid-3" id="prog-grid"></div>
+        </div>
+    </section>
+
+    <!-- HOW WE DO IT -->
+    <section id="how" class="section" style="border-top:1px solid rgba(42,27,24,.1);background:#fdf8f3">
+        <div class="container" style="position:relative;z-index:1">
+            <div class="fade-up" style="max-width:48rem;margin-bottom:1rem">
+                <span class="eyebrow" style="color:#e07a5f">
+                    <span class="eyebrow-line" style="background:#e07a5f"></span>
+                    Our Method
+                </span>
+                <h2
+                    style="font-size:clamp(2.4rem,5vw,4rem);color:#120c0b;letter-spacing:-.03em;line-height:1.05;margin-top:1rem;font-weight:400">
+                    How we do it
+                </h2>
+                <p style="font-size:1rem;color:rgba(42,27,24,.6);margin-top:1rem;max-width:32rem;line-height:1.7">
+                    Most schools teach children <em>what</em> to think. We teach them <em>how</em> to be.
+                    Five principles, practised daily, that parents see transform their children.
+                </p>
+            </div>
+
+            <div class="method-step-list">
+
+                <!-- Step 1 -->
+                <div class="method-step fade-up">
+                    <span class="method-step-n" style="color:#e07a5f">01</span>
+                    <div>
+                        <h3 class="method-step-title">Stories that stick</h3>
+                        <span class="method-step-tag" style="color:#e07a5f">Principle 01</span>
+                    </div>
+                    <div>
+                        <p class="method-step-body">We don't lecture. Every session opens with a <strong>story</strong>,
+                            a real-life dilemma, or a Bhagavad Gītā scene that children debate,
+                            role-play, and make their own. Values land when they live in story.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="method-step fade-up">
+                    <span class="method-step-n" style="color:#e07a5f">02</span>
+                    <div>
+                        <h3 class="method-step-title">Body before books</h3>
+                        <span class="method-step-tag" style="color:#e07a5f">Principle 02</span>
+                    </div>
+                    <div>
+                        <p class="method-step-body">Every session contains <strong>breath and movement</strong>.
+                            Neuroscience confirms it: a regulated nervous system learns, retains, and relates far
+                            better. Yoga here is not exercise — it's preparation for life.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="method-step fade-up">
+                    <span class="method-step-n" style="color:#c89f56">03</span>
+                    <div>
+                        <h3 class="method-step-title">Shlokas as life tools</h3>
+                        <span class="method-step-tag" style="color:#c89f56">Principle 03</span>
+                    </div>
+                    <div>
+                        <p class="method-step-body">Ancient verses taught as <strong>mental frameworks</strong> — not
+                            religious recitation. Children carry them into exams, conflicts, and friendships as inner
+                            anchors.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="method-step fade-up">
+                    <span class="method-step-n" style="color:#e07a5f">04</span>
+                    <div>
+                        <h3 class="method-step-title">Seva as curriculum</h3>
+                        <span class="method-step-tag" style="color:#e07a5f">Principle 04</span>
+                    </div>
+                    <div>
+                        <p class="method-step-body">Children cook, garden, and serve. <strong>Real-world
+                                empathy</strong> grows from the hand, the soil, the kitchen — not from a textbook.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="method-step fade-up">
+                    <span class="method-step-n" style="color:#e07a5f">05</span>
+                    <div>
+                        <h3 class="method-step-title">Parents as partners</h3>
+                        <span class="method-step-tag" style="color:#e07a5f">Principle 05</span>
+                    </div>
+                    <div>
+                        <p class="method-step-body">Monthly parent circles share the same tools children use.
+                            <strong>Growth at home mirrors growth in the classroom.</strong> We build families, not just
+                            students.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="fade-up" style="margin-top:4rem">
+                <div class="pullquote">
+                    <span class="pullquote-mark">&ldquo;</span>
+                    <p class="pullquote-text">We don't change children.<br>We give them the tools to <span
+                            style="color:#c89f56">change themselves.</span></p>
+                    <div class="pullquote-attr">
+                        <div class="pullquote-dash"></div>
+                        <p class="pullquote-name">The Resamskar Philosophy</p>
+                        <div class="pullquote-dash"></div>
+                    </div>
+                    <a href="#demo" class="pullquote-btn">
+                        Book a demo
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUR PILLARS -->
+    <section id="pillars" class="section" style="background:rgba(219,202,176,.10)">
+        <div class="container">
+            <div class="pillars-header fade-up">
+                <div>
+                    <span class="eyebrow" style="color:#e07a5f"><span class="eyebrow-line"
+                            style="background:#e07a5f"></span>Our Approach</span>
+                    <h2
+                        style="font-size:clamp(2rem,4vw,3.4rem);color:#120c0b;margin-top:1rem;letter-spacing:-.02em;line-height:1.08;font-weight:400">
+                        Four pillars of<br>inner development</h2>
+                </div>
+                <p style="font-size:.875rem;color:rgba(42,27,24,.6);line-height:1.7;max-width:32rem">We do not teach
+                    children what to think. We create conditions in which they learn how to think — clearly, kindly, and
+                    courageously.</p>
+            </div>
+            <div id="pillars-list"></div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section" style="border-top:1px solid rgba(42,27,24,.1)">
+        <div class="container">
+            <div class="fade-up" style="margin-bottom:3rem">
+                <span class="eyebrow" style="color:#c89f56"><span class="eyebrow-line"
+                        style="background:#c89f56"></span>What Parents Say</span>
+                <h2
+                    style="font-size:clamp(2rem,4vw,3.2rem);color:#120c0b;margin-top:1rem;letter-spacing:-.02em;line-height:1.08;font-weight:400">
+                    Real children,<br>real change</h2>
+            </div>
+            <div class="grid-2">
+                <div class="fade-up">
+                    <blockquote
+                        style="background:#fdf8f3;border:1px solid rgba(42,27,24,.1);box-shadow:0 4px 24px -4px rgba(18,12,11,.06);border-radius:1rem;padding:2rem;display:flex;flex-direction:column;gap:1.25rem;height:100%">
+                        <span class="testimonial-mark">"</span>
+                        <p class="testimonial-q">My daughter started the Sprouts programme at age six. Within three
+                            months
+                            she was resolving conflicts with her brother using breathing exercises she had learnt. I
+                            never
+                            expected such practical impact.</p>
+                        <footer class="testimonial-footer">
+                            <p class="testimonial-name">Meera Krishnan</p>
+                            <p class="testimonial-from">Parent, Chennai</p>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="fade-up">
+                    <blockquote
+                        style="background:#fdf8f3;border:1px solid rgba(42,27,24,.1);box-shadow:0 4px 24px -4px rgba(18,12,11,.06);border-radius:1rem;padding:2rem;display:flex;flex-direction:column;gap:1.25rem;height:100%">
+                        <span class="testimonial-mark">"</span>
+                        <p class="testimonial-q">The way they weave the Gītā into practical life — not as religion but
+                            as
+                            psychology — was what convinced me. My son now asks "What would be the dharmic choice here?"
+                            before decisions. He is eleven.</p>
+                        <footer class="testimonial-footer">
+                            <p class="testimonial-name">Rakesh Mehrotra</p>
+                            <p class="testimonial-from">Parent, Pune</p>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK DEMO -->
+    <section id="demo" class="section" style="border-top:1px solid rgba(42,27,24,.1); background:#fdf8f3;">
+        <div class="container" style="max-width: 800px;">
+            <div class="fade-up" style="text-align:center; margin-bottom:2rem;">
+                <span class="eyebrow" style="color:#c89f56"><span class="eyebrow-line"
+                        style="background:#c89f56"></span>Book A Demo</span>
+                <h2
+                    style="font-size:clamp(2.4rem,5vw,4rem);color:#120c0b;margin-top:1rem;letter-spacing:-.02em;line-height:1.08;font-weight:400">
+                    Join our next batch
+                </h2>
+            </div>
+            <div class="fade-up">
+                <iframe
+                    data-tally-src="https://tally.so/embed/b5OMe2?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Book Your Free Demo"></iframe>
+                <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact">
+        <div class="footer-cta">
+            <div class="container">
+                <div class="footer-grid fade-up">
+                    <div>
+                        <span class="eyebrow" style="color:#c89f56"><span class="eyebrow-line"
+                                style="background:#c89f56"></span>Gift Your Child</span>
+                        <h2
+                            style="font-size:clamp(2rem,4vw,3.4rem);color:#120c0b;margin-top:1rem;letter-spacing:-.03em;line-height:1.06;font-weight:400">
+                            Begin the journey</h2>
+                        <p
+                            style="font-size:.875rem;margin-top:1rem;max-width:22rem;line-height:1.7;color:rgba(42,27,24,.6)">
+                            Every child deserves an education that speaks to their whole being — mind, heart, and
+                            spirit.</p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-end;text-align:right">
+                        <a href="mailto:programs@resamskar.org" class="footer-email">resamskar@gmail.com</a>
+                        <div class="social-links" style="justify-content:flex-end">
+                            <a href="#" class="social-link">WhatsApp</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <div class="footer-brand">
+                        <img src="./Public/ReSamskar_Logo.png" alt="ReSamskar logo"
+                            onerror="this.style.display='none'" />
+                        <span>ReSamskar </span>
+                    </div>
+                    <nav class="footer-nav">
+                    </nav>
+                    <p class="footer-copy">© <span id="year"></span> Resamskar</p>
+                </div>
+                <div class="footer-tagline">
+                    <p
+                        style="font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: 0.875rem; line-height: 1.25rem; color: rgba(42, 27, 24, 0.40);">
+                        "Ātmano mokṣārthaṃ jagadhitāya ca" — For one's own liberation and for the welfare of the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Year ──
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ── Data ──
+        const C = {
+            gold: '#c89f56', goldLt: 'rgba(200,159,86,0.11)',
+            teal: '#0f3b46', tealLt: 'rgba(15,59,70,0.08)',
+            coral: '#e07a5f', coralLt: 'rgba(224,122,95,0.11)',
+            ink: '#120c0b', ink2: '#2a1b18', ink3: 'rgba(42,27,24,0.60)', ink4: 'rgba(42,27,24,0.38)',
+            border: 'rgba(42,27,24,0.10)',
+        };
+
+        const programs = [
+            {
+                label: 'Stage 01', title: 'The Sprouting Seed', name: 'Sprouts', age: 'Ages 5 – 8', icon: '🌱',
+                color: C.coral, colorLt: C.coralLt, idx: 0,
+                body: 'Foundational habits of mind and heart — curiosity, kindness, basic breath-awareness, and the joy of stories.',
+                modules: ['Morning ritual & gratitude journalling', 'Panchatantra story circles', 'Body-awareness yoga for children', 'Simple seva projects', 'Bhagavad Gītā verse memorisation']
+            },
+            {
+                label: 'Stage 02', title: 'The Seeking Mind', name: 'Seekers', age: 'Ages 9 – 12', icon: '🔥',
+                color: C.gold, colorLt: C.goldLt, idx: 1,
+                body: 'Critical thinking, identity, and purpose — using the Gītā as a map for navigating adolescence with clarity.',
+                modules: ['Philosophy dialogues & Socratic circles', 'Gītā case-study workshops', 'Emotional regulation via pranayama', 'Community seva projects', 'Journalling & self-inquiry']
+            },
+            {
+                label: 'Stage 03', title: 'The Pioneer', name: 'Pioneers', age: 'Ages 13 – 15', icon: '🏔️',
+                color: C.teal, colorLt: C.tealLt, idx: 2,
+                body: 'Leadership, contribution, and the pursuit of dharma — preparing young people to act with skill and compassion in the world.',
+                modules: ['Dharma-leadership workshops', 'Mentorship & peer-coaching circles', 'Urban seva & social entrepreneurship', 'Meditation & inner-silence retreats', 'Life-design and values clarification']
+            },
+        ];
+
+        const pillars = [
+            { n: '01', title: 'Ethics & Dharma', body: 'Ancient ethical frameworks made tangible through lived experience — not memorisation.' },
+            { n: '02', title: 'Mind Management', body: 'Breath regulation, mindful attention, and emotional self-awareness rooted in classical yoga and modern neuroscience.' },
+            { n: '03', title: 'Emotional Intelligence', body: 'Age-appropriate SEL curriculum co-designed with developmental psychologists and tested across Indian schools.' },
+            { n: '04', title: 'Life Skills & Seva', body: 'Cooking, gardening, and community service as sacred acts — building empathy and a sense of responsibility.' },
+        ];
+
+        // ── Render Programme Cards ──
+        const progGrid = document.getElementById('prog-grid');
+        programs.forEach(p => {
+            const modsHTML = p.modules.map(m => `
+    <div class="prog-module">
+      <div class="prog-module-line" style="background:${p.color}"></div>
+      <span>${m}</span>
+    </div>`).join('');
+            const card = document.createElement('div');
+            card.className = 'fade-up';
+            card.innerHTML = `
+    <div class="prog-card">
+      <div class="prog-header" style="background:${p.colorLt}">
+        <span class="prog-watermark" style="color:${p.color}">${String(p.idx + 1).padStart(2, '0')}</span>
+        <div>
+          <span class="prog-age" style="background:${p.color};box-shadow:0 4px 14px -2px ${p.color}55">${p.age}</span>
+        </div>
+        <p class="prog-stage" style="color:${p.color}">${p.label}</p>
+        <h3 class="prog-name" style="color:${p.color}">${p.name}</h3>
+        <p class="prog-title">${p.title}</p>
+        <p class="prog-body">${p.body}</p>
+      </div>
+      <div class="prog-modules">
+        <p class="prog-modules-label">Programme Modules</p>
+        ${modsHTML}
+      </div>
+      <div class="prog-cta-wrap">
+        <a href="#contact" class="prog-cta" style="background:${p.colorLt};color:${p.color};border:1.5px solid ${p.color}30">
+          Explore Programme
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M6.5 2l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>`;
+            progGrid.appendChild(card);
+        });
+
+        // ── Render Pillars ──
+        const pillarsList = document.getElementById('pillars-list');
+        pillars.forEach((p, i) => {
+            const row = document.createElement('div');
+            row.className = 'pillar-row fade-up';
+            if (i === pillars.length - 1) row.style.borderBottom = 'none';
+            row.innerHTML = `
+    <div class="pillar-num">${p.n}</div>
+    <div class="pillar-content">
+      <h4 class="pillar-title">${p.title}</h4>
+      <p class="pillar-body">${p.body}</p>
+    </div>`;
+            pillarsList.appendChild(row);
+        });
+
+        // ── Scroll-triggered fade-up ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { rootMargin: '-50px' });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // ── Navbar scroll effect ──
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 48);
+        });
+
+
+    </script>
+</body>
+
+</html>
