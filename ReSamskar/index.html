@@ -1206,23 +1206,25 @@
         }
 
         .method-step {
-            display: grid;
-            grid-template-columns: 3.5rem 1fr;
-            gap: 0 2rem;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            padding: 1.75rem 1.5rem;
+            margin-bottom: 1.25rem;
             border-radius: 1.25rem;
             background: #fdf8f3;
             box-shadow: 10px 10px 24px #e0d8cc, -10px -10px 24px #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.6);
             align-items: start;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         @media(min-width: 768px) {
             .method-step {
+                display: grid;
                 grid-template-columns: 3.5rem 1fr 1fr;
                 gap: 0 3rem;
+                padding: 2.5rem;
+                margin-bottom: 2rem;
             }
         }
 
@@ -1254,7 +1256,7 @@
             font-size: .875rem;
             line-height: 1.75;
             color: rgba(42, 27, 24, 0.7);
-            margin-top: .6rem;
+            margin-top: .25rem;
         }
 
         @media(min-width: 768px) {
@@ -1273,7 +1275,13 @@
             font-weight: 600;
             letter-spacing: .18em;
             text-transform: uppercase;
-            margin-top: .75rem;
+            margin-top: .35rem;
+        }
+
+        @media(min-width: 768px) {
+            .method-step-tag {
+                margin-top: .75rem;
+            }
         }
 
         .method-step-tag::before {
